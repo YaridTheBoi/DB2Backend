@@ -3,7 +3,7 @@
     public class procentPlciModel
     {
 
-        public int Procent_Kobiet { get; set; }
-        public int Procent_Mezczyzn { get; set;}
+        public int ProcentKobiet { get; set; }
+        public int ProcentMezczyzn { get; set;}
     }
 }

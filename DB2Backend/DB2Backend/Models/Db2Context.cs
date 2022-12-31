@@ -16,6 +16,21 @@ public partial class Db2Context : DbContext
     }
 
     public DbSet<procentPlciModel> procentPlci { get;set; }
+
+    public DbSet<procentKobietZWyzszymModel> procentKobietZWyzszym { get; set; }
+    public DbSet<procentMezczyznZWyzszymModel> procentMezczyznZWyzszym { get; set; }
+
+    public DbSet<procentMieszkajacyWkrajuModel> procentMieszkajacyWkraju { get; set; }
+
+    public DbSet<procentObywateliMowiacychPoPolskuNieOjczyscieModel> procentObywateliMowiacychPoPolskuNieOjczyscie { get; set; }
+
+    public DbSet<procentObywateliONazwiskuModel> procentObywateliONazwisku { get; set; }
+
+    public DbSet<procentObywateliZOjczystymModel> procentObywateliZOjczystym { get; set; }
+
+    public DbSet<obywateleWojewodztwoProcentModels> obywateleWojewodztwoProcent { get; set; }
+
+
     public virtual DbSet<AdresZamieszkanium> AdresZamieszkania { get; set; }
 
     public virtual DbSet<Jezyk> Jezyks { get; set; }
@@ -47,6 +62,21 @@ public partial class Db2Context : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<procentPlciModel>().HasNoKey();
+
+        modelBuilder.Entity<procentKobietZWyzszymModel>().HasNoKey();
+
+        modelBuilder.Entity<procentMezczyznZWyzszymModel>().HasNoKey();
+
+        modelBuilder.Entity<procentMieszkajacyWkrajuModel>().HasNoKey();
+
+        modelBuilder.Entity<procentObywateliMowiacychPoPolskuNieOjczyscieModel>().HasNoKey();
+
+        modelBuilder.Entity<procentObywateliONazwiskuModel>().HasNoKey();
+
+        modelBuilder.Entity<procentObywateliZOjczystymModel>().HasNoKey();
+
+        modelBuilder.Entity<obywateleWojewodztwoProcentModels>().HasNoKey();
+
 
         modelBuilder.Entity<AdresZamieszkanium>(entity =>
         {
