@@ -1,8 +1,10 @@
-﻿namespace DB2Backend.Services
+﻿using DB2Backend.Models;
+
+namespace DB2Backend.Services
 {
     public interface IAuthService
     {
 
-        int Login(string email, string password);
+        LoginResponse Login(string email, string password);
     }
 }

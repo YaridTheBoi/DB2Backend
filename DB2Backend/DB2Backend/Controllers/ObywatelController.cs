@@ -21,7 +21,7 @@ namespace DB2Backend.Controllers
             _obywatelService = obywatelService;
         }
 
-        [DisableCors]
+        
         [Route("getProcentPlci")]
         [HttpGet]
         public IActionResult GetProcentPlci()
@@ -30,7 +30,7 @@ namespace DB2Backend.Controllers
             return Ok(res);
         }
 
-        [DisableCors]
+        
         [Route("getProcentKobietZWyzszym")]
         [HttpGet]
         public IActionResult GetProcentKobietZWyzszym()
@@ -38,7 +38,7 @@ namespace DB2Backend.Controllers
             var res = _obywatelService.getProcentKobietZWyzszym();
             return Ok(res);
         }
-        [DisableCors]
+        
         [Route("getProcentMezczyznZWyzszym")]
         [HttpGet]
         public IActionResult GetProcentMezczyznZWyzszym()
@@ -47,7 +47,7 @@ namespace DB2Backend.Controllers
             return Ok(res);
         }
 
-        [DisableCors]
+        
         [Route("getProcentMieszkajacychWKraju/{kraj}")]
         [HttpGet]
         public IActionResult GetProcentMieszkajacychWKraju([FromRoute] string kraj)
@@ -55,7 +55,7 @@ namespace DB2Backend.Controllers
             var res = _obywatelService.getProcentMieszkajacyWkraju(kraj);
             return Ok(res);
         }
-        [DisableCors]
+        
         [Route("getProcentObywateliMowiacychPoPolskuNieOjczyscie")]
         [HttpGet]
         public IActionResult GetProcentObywateliMowiacychPoPolskuNieOjczyscie()
@@ -66,7 +66,7 @@ namespace DB2Backend.Controllers
 
 
 
-        [DisableCors]
+        
         [Route("getProcentObywateliONazwisku/{nazwisko}")]
         [HttpGet]
         public IActionResult GetProcentObywateliONazwisku([FromRoute] string nazwisko)
@@ -75,7 +75,7 @@ namespace DB2Backend.Controllers
             return Ok(res);
         }
 
-        [DisableCors]
+        
         [Route("getProcentObywateliZOjczystym/{ojczysty}")]
         [HttpGet]
         public IActionResult getProcentObywateliZOjczystym([FromRoute] string ojczysty)
@@ -83,7 +83,7 @@ namespace DB2Backend.Controllers
             var res = _obywatelService.getProcentObywateliZOjczystym(ojczysty);
             return Ok(res);
         }
-        [DisableCors]
+        
         [Route("getObywateleWojewodztwoProcent/{wojewodztwo}")]
         [HttpGet]
         public IActionResult getObywateleWojewodztwoProcent([FromRoute] string wojewodztwo)

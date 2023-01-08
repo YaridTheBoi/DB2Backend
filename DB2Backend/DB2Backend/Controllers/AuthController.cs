@@ -25,12 +25,13 @@ namespace DB2Backend.Controllers
         }
 
 
-        [DisableCors]
+        
         [Route("login")]
         [HttpPost]
         public IActionResult Login([FromBody] LoginModel loginModel)
         {
             var res = _authService.Login(loginModel.username, loginModel.password);
+            if(res == null) { return NotFound(); }
             return Ok(res);
         }
 

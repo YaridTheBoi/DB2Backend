@@ -6,7 +6,7 @@ namespace DB2Backend.Services
     public class AuthService : IAuthService
     {
         private Db2Context context = new Db2Context();
-        public int Login(string email, string password)
+        public LoginResponse Login(string email, string password)
         {
             KontoPortalu konto = context.KontoPortalus.Where(m => m.Email ==email).FirstOrDefault();
             Obywatel obywatel;
@@ -19,12 +19,12 @@ namespace DB2Backend.Services
                     if (obywatel.Pesel == password)
                     {
 
-                        return obywatel.Id;
+                        return new LoginResponse { idObywatela = obywatel.Id, czyUrzednik = konto.CzyUrzednik};
                     }
                 }
 
             }
-            return -1;
+            return null ;
         }
     }
 }
