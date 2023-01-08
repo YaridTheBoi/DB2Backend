@@ -1,5 +1,6 @@
 ﻿using DB2Backend.Models;
 using DB2Backend.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,7 @@ namespace DB2Backend.Controllers
         }
 
 
-
+        [DisableCors]
         [Route("login")]
         [HttpPost]
         public IActionResult Login([FromBody] LoginModel loginModel)
