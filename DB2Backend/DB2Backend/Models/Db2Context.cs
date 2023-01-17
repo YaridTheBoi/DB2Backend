@@ -30,6 +30,7 @@ public partial class Db2Context : DbContext
 
     public DbSet<obywateleWojewodztwoProcentModels> obywateleWojewodztwoProcent { get; set; }
 
+    public DbSet<wstawNowegoObywatelaZAdresemModel> wstawNowegoObywatelaZAdresem { get; set; }
 
     public virtual DbSet<AdresZamieszkanium> AdresZamieszkania { get; set; }
 
@@ -77,6 +78,7 @@ public partial class Db2Context : DbContext
 
         modelBuilder.Entity<obywateleWojewodztwoProcentModels>().HasNoKey();
 
+        modelBuilder.Entity<wstawNowegoObywatelaZAdresemModel>().HasNoKey();
 
         modelBuilder.Entity<AdresZamieszkanium>(entity =>
         {

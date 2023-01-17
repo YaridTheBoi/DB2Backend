@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddScoped<IObywatelService, ObywatelService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-
+builder.Services.AddScoped<IPracownikService, PracownikService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
