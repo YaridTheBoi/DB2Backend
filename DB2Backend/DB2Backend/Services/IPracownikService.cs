@@ -6,5 +6,6 @@ namespace DB2Backend.Services
     {
 
         public int postNowyObywatelZAdresem( wstawNowegoObywatelaZAdresemModel input);
+        Obywatel getInfoOObywateluPoPeselu(string pesel);
     }
 }

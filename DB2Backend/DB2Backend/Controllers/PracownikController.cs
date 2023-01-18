@@ -26,5 +26,17 @@ namespace DB2Backend.Controllers
             return Ok(res);
         }
 
+        [Route("getInfoOObywateluPoPeselu/{pesel}")]
+        [HttpGet]
+        public IActionResult getInfoOObywateluPoPeselu([FromRoute] string pesel)
+        {
+            var res = _pracownikService.getInfoOObywateluPoPeselu(pesel);
+            if(res == null)
+            {
+                return NotFound();
+            }
+            return Ok(res);
+        }
+
     }
 }
